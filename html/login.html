@@ -1,0 +1,91 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" />
+    <link rel="stylesheet" href="../css/home.css">
+    <title>Đăng ký tiêm</title>
+</head>
+<body>
+    <div id="container">
+       <div class="wrapper">
+            <nav>
+                <input type="checkbox" id="show-search">
+                <input type="checkbox" id="show-menu">
+                <label for="show-menu" class="menu-icon"><i class="fas fa-bars"></i></label>
+                <div class="content">
+                    <div class="logo"><a href="#">Tiêm chủng Covid 19</a></div>
+                    <ul class="links">
+                        <li><a href="#">Trang chủ</a></li>
+                        <li><a href="#">Đăng ký tiêm</a></li>
+                        <li>
+                            <a href="#" class="desktop-link">Tra cứu</a>
+                            <input type="checkbox" id="show-tc">
+                            <label for="show-tc">Tra cứu</label>
+                            <ul>
+                                <li><a href="#">Tra cứu chứng nhận tiêm</a></li>
+                                <li><a href="#">Tra cứu kết quả đăng ký</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#" class="desktop-link">Tài liệu</a>
+                            <input type="checkbox" id="show-tl">
+                            <label for="show-tl">Tài liệu</label>
+                            <ul>
+                                <li><a href="#">Drop Menu 1</a></li>
+                                <li><a href="#">Drop Menu 2</a></li>
+                                <li>
+                                    <a href="#" class="desktop-link">More Items</a>
+                                    <input type="checkbox" id="show-items">
+                                    <label for="show-items">More Items</label>
+                                    <ul>
+                                        <li><a href="#">Sub Menu 1</a></li>
+                                        <li><a href="#">Sub Menu 2</a></li>
+                                        </ul>
+                                </li>
+                            </ul>
+                        </li>
+                        <li><a href="#">Đăng nhập</a></li>
+                    </ul>
+                </div>
+                <!-- <label for="show-search" class="search-icon"><i class="fas fa-search"></i></label>
+                <form action="#" class="search-box">
+                    <input type="text" placeholder="Type Something to Search..." required>
+                    <button type="submit" class="go-icon"><i class="fas fa-long-arrow-alt-right"></i></button>
+                </form> -->
+            </nav>
+        </div>
+        
+        <div class="content">
+            <div id="title"></div>
+            <div id="title2">
+                <p>Đăng nhập</p>
+            </div>
+            <form action="action_page.php" method="post" class="login">
+                <div class="img">
+                  <img src="../img/login.jpeg" alt="" >
+                </div>
+              
+                <div class="login_form">
+                  <label for="sdt"><b>Số điện thoại</b></label>
+                  <input type="text" placeholder="Số điện thoại" name="sdt" required>
+              
+                  <label for="psw"><b>Mật khẩu</b></label>
+                  <input type="password" placeholder="Mật khẩu" name="psw" required>
+                  <a href="">Quên mật khẩu</a>
+                  <button type="submit" id="login_btn">Đăng nhập</button>
+                  <p>Hoặc đăng ký tài khoản, nếu bạn chưa đăng ký!</p>
+                  <button href="" id="signup_btn">Đăng ký</button>
+                </div>
+                
+            </form>
+        </div>
+        <div class="footer">
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
