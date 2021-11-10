@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" />
-    <link rel="stylesheet" href="../css/home.css">
+    <link rel="stylesheet" href="../../css/home.css">
     <title>Đăng ký tiêm</title>
 </head>
 <body>
@@ -85,14 +85,6 @@
             </div>
             <form action="" class="personal_information" id="form1">
                 <div id="selection">
-                    <input type="radio">
-                    <div class="se1">
-                        <p>Đăng ký bản thân</p>
-                    </div> 
-                    <input type="radio"> 
-                    <div class="se2">
-                        <p>Đăng ký cho người thân</p>
-                    </div>
                 </div>
                 <div id="somuitiem">
                     <label for="">Số mũi tiêm</label>
@@ -364,7 +356,7 @@
         <div class="footer">
         </div>
     </div>
-    <script src="../script/script.js"></script>
+    <script src="../../script/script.js"></script>
     <script>
         Validator({
             form: '#form1',

@@ -72,9 +72,6 @@
 			</li>
 		</ul>
 	</section>
-
-	<script src="../../script/script.js"></script>
-	
 	<!-- CONTENT -->
 	<section id="content">
 		<!-- NAVBAR -->
@@ -171,7 +168,7 @@
 
 	
 
-	
+	<script src="../../script/script_ad.js"></script>
 </body>
 
 

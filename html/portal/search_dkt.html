@@ -13,7 +13,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" />
-    <link rel="stylesheet" href="../css/home.css">
+    <link rel="stylesheet" href="../../css/home.css">
     <title>Đăng ký tiêm</title>
 </head>
 <body>
@@ -67,55 +67,37 @@
         </div>
         <div id="title"></div>
             <div id="title2">
-                <p>Tra cứu chứng nhận tiêm</p>
+                <p>Tra cứu đăng ký tiêm</p>
             </div>
-        </div>
         <div class="content_search">
-            <form action="" method="post" class="search_cnt">
-                <div class="">
-                    <label for="">Họ và tên</label>
-                    <input type="text" placeholder="Họ và tên">
+            <div class="box">
+                <form action="" method="post" class="search_dkt">
+                    <div class="">
+                        <label for="">Số điện thoại</label>
+                        <input type="text" placeholder="Số điện thoại">
+                    </div>
+                    <div class="">
+                        <label for="">Số CMND/CCCD/HC</label>
+                        <input type="number" placeholder="Số CMND/CCCD/HC">
+                    </div>
+                </form>
+                <div class="note">
+                    <p> <span style="font-weight: bold;"> Chú ý: </span>Nếu chưa tiêm chủng, bạn có thể đăng ký <a href="" style="color: red;">tại đây</a></p>
                 </div>
-                <div class="">
-                    <label for="">Ngày sinh</label>
-                    <input type="date" placeholder="Ngày sinh">
-                </div>
-                <div class="">
-                    <label for="">Giới tính</label>
-                    <select name="" id="">
-                        <option value="">Giới tính</option>
-                        <option value="">Nam</option>
-                        <option value="">Nữ</option>
-                    </select>
-                </div>
-                <div class="">
-                    <label for="">Số điện thoại</label>
-                    <input type="text" placeholder="Số điện thoại">
-                </div>
-                <div class="">
-                    <label for="">Số CMND/CCCD/HC</label>
-                    <input type="number" placeholder="Số CMND/CCCD/HC">
-                </div>
-                <div class="">
-                    <label for="">Số thẻ BHYT</label>
-                    <input type="number" placeholder="Số thẻ BHYT">
-                </div>
-            </form>
-            <div class="note">
-                <p> <span style="font-weight: bold;"> Chú ý: </span>Nếu chưa tiêm chủng, bạn có thể đăng ký <a href="" style="color: red;">tại đây</a></p>
+                <div class="btn">
+                    <div class="cancel_btn">
+                        <button id="btn_cancel"><i class="fas fa-sync-alt"></i> Nhập lại</button>
+                    </div>
+                    <div class="next_btn" >
+                        <button onclick=""><i class="fas fa-search"></i> Tra cứu</button>
+                    </div>
+                </div> 
             </div>
-            <div class="btn">
-                <div class="cancel_btn">
-                    <button id="btn_cancel"><i class="fas fa-sync-alt"></i> Nhập lại</button>
-                </div>
-                <div class="next_btn" >
-                    <button onclick=""><i class="fas fa-search"></i> Tra cứu</button>
-                </div>
-            </div> 
         </div>
+
         <div class="footer">
         </div>
     </div>
-    <script src="script.js"></script>
+    <script src="../../script/script.js"></script>
 </body>
 </html>
