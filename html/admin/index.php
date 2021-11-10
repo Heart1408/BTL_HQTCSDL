@@ -5,11 +5,10 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" />
 	<link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
-	<link rel="stylesheet" href="../css/style.css">
+	<link rel="stylesheet" href="../../css/style.css">
 	<title>Admin</title>
 </head>
 <body>
-
 
 	<!-- SIDEBAR -->
 	<section id="sidebar">
@@ -19,9 +18,9 @@
 		</a>
 		<ul class="side-menu top">
 			<li class="active">
-				<a href="#">
+				<a onclick="view_list(1)">
 					<i class='bx bxs-dashboard' ></i>
-					<span class="text">Dashboard</span>
+					<span class="text">Dữ liệu tiêm chủng</span>
 				</a>
 			</li>
 			<li>
@@ -32,29 +31,29 @@
 				</label>
 				<ul>
 					<li>
-						<a href="#">
+						<a onclick="view_list(2)">
 							<i class="fas fa-clipboard"></i>
-							<span>Thông tin cá nhân</span>
+							<span>Đăng kí tiêm chủng</span>
 						</a>
 					</li>
 					<li>
-						<a href="#">
+						<a onclick="view_list(3)">
 							<i class="fas fa-notes-medical"></i>
-							<span>Thông tin khai báo y tế</span>
+							<span>Chứng nhận tiêm chủng</span>
 						</a>
 					</li>
 				</ul>
 			</li>
 			<li>
-				<a href="#">
-					<i class="fas fa-syringe"></i>
-					<span class="text">Dữ liệu tiêm chủng</span>
+				<a onclick="view_list(4)">
+					<i class='fas'>&#xf073;</i>
+					<span class="text">Lịch tiêm</span>
 				</a>
 			</li>
 			<li>
-				<a href="#">
-					<i class='bx bxs-message-dots' ></i>
-					<span class="text">Phản hồi</span>
+				<a onclick="view_list(5)">
+					<i class='fas'>&#xf46b;</i>
+					<span class="text">Thuốc</span>
 				</a>
 			</li>
 		</ul>
@@ -62,19 +61,20 @@
 			<li>
 				<a href="#">
 					<i class='bx bxs-cog' ></i>
-					<span class="text">Settings</span>
+					<span class="text">Cài đặt</span>
 				</a>
 			</li>
 			<li>
 				<a href="#" class="logout">
 					<i class='bx bxs-log-out-circle' ></i>
-					<span class="text">Logout</span>
+					<span class="text">Đăng xuất</span>
 				</a>
 			</li>
 		</ul>
 	</section>
 
-
+	<script src="../../script/script.js"></script>
+	
 	<!-- CONTENT -->
 	<section id="content">
 		<!-- NAVBAR -->
@@ -99,6 +99,7 @@
 
 		<!-- MAIN -->
 		<main>
+			<div id="overdata" class="view_op">
 			<div class="head-title">
 				<div class="left">
 					<h2>Dashboard</h2>
@@ -126,14 +127,14 @@
 					<i class="fas fa-syringe"></i>
 					<span class="text">
 						<h3>2834</h3>
-						<p>Tổng số mũi tiêm</p>
+						<p>Tổng số mũi đã tiêm</p>
 					</span>
 				</li>
 				<li>
 					<i class="fas fa-syringe"></i>
 					<span class="text">
 						<h3>2543</h3>
-						<p>...</p>
+						<p></p>
 					</span>
 				</li>
 				<li>
@@ -145,12 +146,33 @@
 				</li>
 			</ul>
 
+			</div>
+
+			<div id="register_list" class="view_op">
+				<?php include 'register_list.php' ?>
+			</div>
+
+			<div id="certificate" class="view_op">
+				<?php include 'certificate.html' ?>
+			</div>
+
+			<div id="schedule" class="view_op">
+				<?php include 'schedule.php' ?>
+			</div>
+
+			<div id="medicine" class="view_op">
+				<?php include 'medicine.php' ?>
+			</div>
 		</main>
 		<!-- MAIN -->
 	</section>
 	<!-- CONTENT -->
 	
 
-	<script src="../script/script.js"></script>
+	
+
+	
 </body>
+
+
 </html>

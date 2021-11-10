@@ -96,7 +96,7 @@
                 </div>
                 <div id="somuitiem">
                     <label for="">Số mũi tiêm</label>
-                    <input type="number"placeholder="Số mũi tiêm">
+                    <input type="number" placeholder="Số mũi tiêm">
                 </div>
                 <br>
                 <div id="dkthongtin">
@@ -104,72 +104,83 @@
                     <label class="title" for="">1. Thông tin người tiêm <br></label>
                      <!-- <br> -->
                     <div class="ttkhaibao col-4">
-                        <label>Họ và tên</label>
-                        <input type="text" >
+                        <label for="fullname">Họ và tên <sup>(*)</sup></label>
+                        <input type="text" id="fullname" placeholder="Họ và tên">
+                        <small></small>
                     </div>
                     <div class="ttkhaibao col-4">
-                        <label for="">Ngày sinh</label>
-                        <input type="date">
+                        <label for="ngaysinh">Ngày sinh <sup>(*)</sup></label>
+                        <input id="ngaysinh" type="date">
+                        <small></small>
                     </div>
                     <div class="ttkhaibao col-4">
-                        <label for="">Giới tính</label>
-                        <select name="" id="">
+                        <label for="gioitinh">Giới tính <sup>(*)</sup></label>
+                        <select name="" id="gioitinh">
                             <option value="">Giới tính</option>
-                            <option value="">Nam</option>
-                            <option value="">Nũ</option>
+                            <option value="1">Nam</option>
+                            <option value="2">Nữ</option>
                         </select>
+                        <small></small>
                     </div>
                     <div class="ttkhaibao col-4">
-                        <label for="">Số điện thoại</label>
-                        <input type="text">
+                        <label for="phone">Số điện thoại <sup>(*)</sup></label>
+                        <input id="phone" name="" type="number" placeholder="Số điện thoại">
+                        <small></small>
                     </div>
                     <div class="ttkhaibao col-4">
-                        <label for="">Email</label>
-                        <input type="text">
+                        <label for="email">Email</label>
+                        <input id="email" name="" type="text" placeholder="Email">
+                        <small></small>
                     </div>
                     <div class="ttkhaibao col-4">
-                        <label for="">Số CMND/CCCD/HC</label>
-                        <input type="number">
+                        <label for="cccd">Số CMND/CCCD/HC <sup>(*)</sup></label>
+                        <input id="cccd" name="" type="number" placeholder="Số CMND/CCCD/HC">
+                        <small></small>
                     </div>
                     <div class="ttkhaibao col-4">
                         <label for="">Số thẻ BHYT</label>
-                        <input type="number">
+                        <input type="number" placeholder="Số thẻ BHYT">
                     </div>
                     <div class="ttkhaibao col-4">
                         <label for="">Nghề nghiệp</label>
-                        <input type="text">
+                        <input type="text" placeholder="Nghề nghiệp">
                     </div>
                     <div class="ttkhaibao col-4">
                         <label for="">Đơn vị công tác</label>
-                        <input type="text" placeholder="Đơn vị công tác">
+                        <input name="" type="text" placeholder="Đơn vị công tác">
                     </div>
                     <div class="ttkhaibao col-3">
                         <label for="">Địa chỉ hiện tại</label>
                         <input type="text" placeholder="Địa chỉ hiện tại">
                     </div>
                     <div class="ttkhaibao col-4">
-                        <label for="">Tỉnh/Thành phố</label>
-                        <select name="" id="">
+                        <label for="tinh">Tỉnh/Thành phố <sup>(*)</sup></label>
+                        <select name="" id="tinh">
                             <option value="">Tỉnh/Thành phố</option>
+                            <option value="1">Thái Bình</option>
                         </select>
+                        <small></small>
                     </div>
                     <div class="ttkhaibao col-4">
-                        <label for="">Quận/Huyện</label>
-                        <select name="" id="">
+                        <label for="quanhuyen">Quận/Huyện <sup>(*)</sup></label>
+                        <select name="" id="quanhuyen">
                             <option value="">Quận/Huyện</option>
+                            <option value="1">Quỳnh Phụ</option>
                         </select>
+                        <small></small>
                     </div>
                     <div class="ttkhaibao col-2">
-                        <label for="">Xã/Phường</label>
-                        <select name="" id="">
+                        <label for="xaphuong">Xã/Phường <sup>(*)</sup></label>
+                        <select name="" id="xaphuong">
                             <option value="">Xã/Phường</option>
+                            <option value="1">Quỳnh Hải</option>
                         </select>
-                        
+                        <small></small>
                     </div>
                     <div class="ttkhaibao col-4">
                         <label for="">Dân tộc</label>
                         <select name="" id="">
-                            <option value="">Kinh</option>
+                            <option>Kinh</option>
                         </select>
                     </div>
                     <div class="ttkhaibao col-4">
@@ -179,10 +190,12 @@
                         </select>
                     </div>
                     <div class="ttkhaibao col-2">
-                        <label for="">Nhóm ưu tiên</label>
-                        <select name="" id="">
+                        <label for="nhomuutien">Nhóm ưu tiên <sup>(*)</sup></label>
+                        <select name="" id="nhomuutien">
                             <option value="">Nhóm ưu tiên</option>
+                            <option value="1">1.....</option>
                         </select>
+                        <small></small>
                     </div> 
                     <div style="display: inline-block; width: 100%; margin-top: 20px;">
                         <label class="title" for="">2.Đăng ký thông tin tiêm chủng <br></label> 
@@ -208,16 +221,17 @@
                         <li>Cá nhân/Tổ chức đăng ký thành công trên hệ thống sẽ được đưa vào danh sách đặt tiêm. 
                             Cơ sở y tế sẽ thông báo lịch tiêm khi có vắc xin và kế hoạch tiêm được phê duyệt. Trân trọng cảm ơn!</li>
                     </ul>
-                </div>   
-            </form>
-            <div class="btn btn1">
-                <div class="cancel_btn">
-                    <button id="btn_cancel">Hủy bỏ</button>
-                </div>
-                <div class="next_btn" id="moveto_medical_history">
-                    <button onclick="next1(this)">Tiếp tục  <span>&#8250;</span></button>
-                </div>
-            </div> 
+                </div> 
+                <div class="btn btn1" >
+                    <div class="cancel_btn">
+                        <button id="btn_cancel">Hủy bỏ</button>
+                    </div>
+                    <div class="next_btn" id="moveto_medical_history">
+                        <button id="btn1_submit" type="submit">Tiếp tục  <span>&#8250;</span></button>
+                   
+                    </div> 
+                </div>  
+            </form> 
 
             <form action="" class="medical_history" id="form2">
                 <table>
@@ -236,29 +250,29 @@
                             <td>
                                 <input type="text" placeholder="Nếu có, ghi rõ các loại tác nhân dị ứng">
                             </td>
-                            <td><input type="radio"></td>
-                            <td><input type="radio"></td>
-                            <td><input type="radio"></td>
+                            <td><input type="radio" name="check"></td>
+                            <td><input type="radio" name="check" checked="checked"></td>
+                            <td><input type="radio" name="check"></td>
                         </tr>
                         <tr>
                             <td>2. Tiền sử bị COVID-19 trong vòng 6 tháng</td>
                             <td></td>
                             <td><input type="radio"></td>
-                            <td><input type="radio"></td>
+                            <td><input type="radio" checked="checked"></td>
                             <td><input type="radio"></td>
                         </tr>
                         <tr>
                             <td>3. Tiền sử tiêm vắc xin khác trong 14 ngày qua</td>
                             <td><input type="text" placeholder="Nếu có, ghi rõ loại vắc xin"></td>
-                            <td><input type="radio"></td>
-                            <td><input type="radio"></td>
+                            <td><input type="radio" value=""></td>
+                            <td><input type="radio" checked="checked"></td>
                             <td><input type="radio"></td>
                         </tr>
                         <tr>
                             <td>4. Tiền sử suy giảm miễn dịch, ung thư giai đoạn cuối, cắt lách, xơ gan mất bù ...</td>
                             <td></td>
                             <td><input type="radio"></td>
-                            <td><input type="radio"></td>
+                            <td><input type="radio" checked="checked"></td>
                             <td><input type="radio"></td>
                         </tr>
                     </tbody>
@@ -269,10 +283,10 @@
                     <button onclick="cancel1(this)">Quay lại</button>
                 </div>
                 <div class="next_btn ">
-                    <button onclick="next2(this)">Tiếp tục  <span>&#8250;</span></button>
+                    <button type="submit" form="form2">Tiếp tục  <span>&#8250;</span></button>
                 </div>
             </div>
-            
+
             <form action="" class="confirm_consent" id="form3">
                 <table>
                     <tr>
@@ -305,7 +319,7 @@
                 <div class="confirm">
                     <p>
                         Sau khi đã đọc các thông tin nêu trên, tôi đã hiểu về các nguy cơ và:
-                        <input type="checkbox">Đồng ý tiêm chủng
+                        <input type="checkbox" id="checkbox">Đồng ý tiêm chủng
                     </p>  
                 </div>
             </form>
@@ -314,10 +328,10 @@
                     <button onclick="cancel2(this)">Quay lại</button>
                 </div>
                 <div class="next_btn ">
-                    <button onclick="popup()">Xác nhận</button>
+                    <button type="submit" onclick="popup()" form="form3">Xác nhận</button>
                 </div>
             </div>
-            <form action="" class="popup">
+            <form action="" class="popup" id="popup">
                 <div class="popup-content">
                     <div class="title">
                         <!-- <span class="close-btn">&times;</span> -->
@@ -328,10 +342,10 @@
                     </div>
                     <div class="btn">
                         <div class="cancel_btn">
-                            <button onclick="closePopup()">Hủy bỏ</button>
+                            <button type="reset" onclick="closePopup()">Hủy bỏ</button>
                         </div>
                         <div class="next_btn">
-                            <button onclick="next4()">Xác nhận</button>
+                            <button type="submit">Xác nhận</button>
                         </div>
                     </div>
                 </div>
@@ -341,12 +355,54 @@
                     <p>Xác thực thành công</p>
                     <p>Chờ thông tin đăng ký tiêm được cập nhật</p>
                 </div>
-                <button>Trang chủ</button>
+                <div class="btn next_btn">
+                    <button>Trang chủ</button>
+                </div>
+                
             </form>
         </div>
         <div class="footer">
         </div>
     </div>
     <script src="../script/script.js"></script>
+    <script>
+        Validator({
+            form: '#form1',
+            errorSelector: 'small',
+            rules: [
+                Validator.isRequired("#fullname"),
+                Validator.isRequired("#tinh"),
+                Validator.isDate("#ngaysinh"),
+                Validator.isRequired("#gioitinh"),
+                Validator.isRequired("#quanhuyen"),
+                Validator.isRequired("#xaphuong"),
+                Validator.isRequired("#nhomuutien"),
+                Validator.isEmail("#email"),
+                Validator.isPhone("#phone", 10, 11),
+                Validator.isCCCD("#cccd",10, 12),
+            ],
+            onSubmit: function(data) {
+                // console.log(data);
+            }
+        });
+        Validator2({
+            form: '#form2',
+            onSubmit: function(data) {
+                // console.log(data);
+            }
+        })
+        Validator3({
+            form: '#form3',
+            onSubmit: function(data) {
+                // console.log(data);
+            }
+        })
+        Validator4({
+            form: '#popup',
+            onSubmit: function(data) {
+                // console.log(data);
+            }
+        })
+    </script>
 </body>
 </html>

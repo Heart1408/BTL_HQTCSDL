@@ -106,3 +106,26 @@ window.addEventListener('resize', function () {
 		searchForm.classList.remove('show');
 	}
 })
+
+function view_list(num)
+{
+    let cont = document.getElementsByClassName("view_op");
+    let menu1 = document.querySelectorAll(".side-menu.top a");
+    console.log(menu1);
+    for (var i=0; i<cont.length; i++)
+        {
+            cont[i].style.display = "none";
+            menu1[i].parentElement.classList.remove('active');
+        }
+    cont[num-1].style.display = "block";
+    menu1[num-1].parentElement.classList.add('active');
+    if (num == 2 || num == 3) {
+        document.getElementById("show-tc").checked = true;
+    }
+}
+    
+function vaccine_des(des)
+    {
+        console.log(des);
+        document.getElementById("vaccine_des").innerHTML = des;
+    }

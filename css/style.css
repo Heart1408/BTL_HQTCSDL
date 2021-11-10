@@ -489,7 +489,7 @@ body {
 }
 #content main .table-data .todo .todo-list {
 	width: 100%;
-	height: 330px;
+	height: 380px;
 	overflow-y: auto;
 }
 #content main .table-data .todo .todo-list li {
@@ -586,4 +586,151 @@ body {
 	#content main .table-data .todo .todo-list {
 		min-width: 420px;
 	}
+}
+
+.head {
+	position: relative;
+}
+.bx-search {
+	position: absolute;
+	right: 0px;
+}
+
+#date {
+	width: 30%;
+	height: 25px;
+}
+
+.head label {
+	font-size: 19px;
+	font-weight:500;
+}
+
+.table-data {
+	height: 500px;
+}
+
+#total {
+	margin: 23px 3px;
+}
+
+#register_list, #certificate {
+	display: none;
+}
+
+.row {
+	margin: 10px;
+	display: flex;
+	flex-direction: row;
+	width: 100%;
+
+}
+
+label {
+	margin: 3px;
+}
+
+.first_label {
+	width: 230px;
+}
+
+.row span{
+	margin-right: 20px; 
+}
+
+.row > input, select {
+	
+	width: 240px;
+}
+
+.check, .update {
+	border: none;
+	background-color: var(--blue);
+	color: white;
+	font-size: 17px;
+	padding: 7px;
+	margin: 20px 0px;
+	position: relative;
+	left: 245px;
+	cursor: pointer;
+}
+
+.check:hover, .update:hover {
+	background-color:steelblue;
+	transform: scale(0.95, 0.95);
+}
+
+#recently_list {
+	height: 400px;
+	width: 100%;
+	border-collapse: collapse;
+	table-layout: fixed;
+}
+
+#recently_list thead {
+	text-align: left;
+}
+#recently_list tbody{
+	height: 100%;
+	overflow: auto;
+	width: 100%;
+	display: block;
+}
+
+
+#recently_list tr {
+	width: 100%;
+	table-layout: fixed;
+	height: 40px;
+	display: table;
+}
+
+
+
+#schedule {
+	display: none;
+}
+
+#recently_list1 {
+	height: 400px;
+	width: 100%;
+	border-collapse: collapse;
+	table-layout: fixed;
+}
+
+#recently_list1 thead {
+	text-align: left;
+}
+#recently_list1 tbody{
+	height: 100%;
+	overflow: auto;
+	width: 100%;
+	display: block;
+}
+
+
+#recently_list1 tr {
+	width: 100%;
+	table-layout: fixed;
+	height: 40px;
+	display: table;
+}
+
+#recently_list1 .view {
+	font-size: 15px;
+	padding: 5px 12px;
+	color: var(--light);
+	border-radius: 5px;
+	font-weight: 400;
+	background: rgb(204, 202, 202);
+	color: black;
+	cursor: pointer;
+}
+
+#medicine {
+	display: none;
+}
+
+.row > .smaller {
+	width: 80px;
 }
