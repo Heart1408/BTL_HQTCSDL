@@ -345,6 +345,9 @@ input:hover, select:hover{
 #dkthongtin input[type=number]::-webkit-inner-spin-button {
 -webkit-appearance: none;
 }
+#form1 input[type=number]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  }
 small {
  position: absolute;
  margin-top: 5px;
@@ -661,36 +664,36 @@ width: 95%;
 }
 /* ------------------------------- */
 
-form.confirm_consent table {
+.confirm_consent table {
 width: 99%;
 margin: auto;
 border-bottom: 1px solid #dddddd;
 }
-form.confirm_consent table tr td p {
+.confirm_consent table tr td p {
 margin: 10px;
 font-size: 17px;
 }
-form.confirm_consent table tr td i {
+.confirm_consent table tr td i {
 font-size: large;
 color:rgb(7, 64, 189)
 }
-form.confirm_consent table tr td:first-child {
+.confirm_consent table tr td:first-child {
 width: 20px;
 text-align: center;
 }
-form.confirm_consent table tr td:last-child {
+.confirm_consent table tr td:last-child {
 width: 98%;
 }
-form.confirm_consent .confirm {
+.confirm_consent .confirm {
 display: block;
 margin: 50px;
 width: 100%;
 }
-form.confirm_consent .confirm p {
+.confirm_consent .confirm p {
 width: 100%;
 text-align: left;
 }
-form.confirm_consent .confirm p input{
+.confirm_consent .confirm p input{
 display: inline;
 height: 17px;
 width: 17px;
@@ -826,43 +829,135 @@ color:rgb(49, 49, 175);
 background-color: rgb(64, 108, 204);
 color: white;
 }
+
+/* ------------------ */
+.content_search .box_dkt {
+  position: relative;
+  display: block;
+  width: 75%;
+  margin: auto;
+}
+#form_dkt {
+  position: relative;
+  display: block;
+  width: 100%;
+  margin-bottom: 0;
+  background-color: #e4e1e1;
+  color:rgb(53, 53, 53);
+}
+.height {
+  height: 920px;
+}
+#form_dkt h2 {
+  padding-top: 60px;
+  display: block;
+  text-align: center;
+  line-height: 100px;
+}
+#form_dkt h3 {
+  line-height: 40px;
+  padding-top: 20px;
+}
+#form_dkt > div {
+  display: block;
+  margin-left: 9%;
+}
+#form_dkt > div p {
+  display: block;
+  margin-left: 2%;
+  line-height: 30px;
+}
+#form_dkt .row {
+  display: flex;
+}
+#form_dkt .row p {
+  flex: 1;
+}
+.content_search  .button {
+  display: block;
+  line-height: 80px;
+  margin-left: 12.5%;
+}
+.content_search  .button button {
+  height: 30px;
+  width: 60px;
+  box-shadow: 3px 2px 5px #cacaca;
+}
+.content_search  .button button:hover {
+  cursor: pointer;
+}
 /* ---------------- */
 
 form.search_dkt {
-display: flex;
-width: 95%;
-margin: auto;
-}
-form.search_dkt > div {
-width: 48%;
-margin: 1%;
-}
-form.search_dkt > div select, input {
-margin-top: 10px;
-}
-.box .btn button{
-margin-bottom: 30px;
+  width: 95%;
+  margin: auto;
 }
 
+.flex {
+  display: flex;
+}
+form.search_dkt > div > div {
+  width: 48%;
+  margin: 1%;
+}
+form.search_dkt select, input {
+  margin-top: 10px;
+}
+.box .btn div{
+  margin-bottom: 30px;
+  display: inline;
+}
+.line {
+  border: 1px solid rgba(77, 74, 74, 0.867);
+  width: 90%;
+  margin: auto;
+  margin-bottom: 40px;
+}
+.error{
+  display: flex;
+  width: 330px;
+  height: 60px;
+  background-color: rgb(192, 70, 70);
+  color: white;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  margin-left: 10px;
+  box-shadow: 2px 2px 10px rgb(209, 140, 140);
+}
+.error p {
+  display: flex;
+  padding: 13px;
+}
+.error button {
+  border-radius: 6px;
+  cursor: pointer;
+  background-color: rgb(192, 70, 70);
+  border: none;
+}
+.error button i {
+  color: white;
+  font-size: 20px;
+  margin-left: 15px;
+}
 .statistic {
-margin-top: 30px!important;
-display: flex;
-height: 80px;
-width: 98%;
-box-shadow: 7px 7px 7px rgb(182, 181, 181);
-margin: auto;
+  margin-top: 30px!important;
+  display: flex;
+  height: 80px;
+  width: 98%;
+  box-shadow: 7px 7px 7px rgb(182, 181, 181);
+  margin: auto;
 }
 .statistic > div {
-flex: auto;
-display: flex;
-align-items: center;
-border-right: 1px solid #dddddd;
-background-color: rgb(248, 248, 248);
+  flex: auto;
+  display: flex;
+  align-items: center;
+  border-right: 1px solid #dddddd;
+  background-color: rgb(248, 248, 248);
 }
 .statistic i.fas {
-color:rgb(78, 41, 182);
-font-size: 25px;
-margin: 15px;
+  color:rgb(78, 41, 182);
+  font-size: 25px;
+  margin: 15px;
 }
 .statistic h1 {
 font-size: 29px;
@@ -941,20 +1036,53 @@ margin: auto;
 margin-top: 30px;
 }
 .search_loca .table{
-width: 97%;
-border-collapse: collapse;
-padding:20px;
-margin: auto;
-margin-bottom: 30px;
+  width: 97%;
+  border-collapse: collapse;
+  padding:20px;
+  margin: auto;
+  margin-bottom: 30px;
 }
 
-.search_loca .table td,.table th{
-padding:12px 15px;
+.search_loca .table th,
+.search_loca .table td{
+padding:10px 15px;
 border:1px solid #ddd;
 text-align: center;
 font-size:16px;
 font-weight: 500;
 }
+.search_loca .table td {
+  font-size: 15px;
+  padding: 8px;
+}
+
+div.item_page {
+  position: relative;
+  display: block;
+  float: right;
+  right: 1.5%;
+  margin: 20px 0;
+}
+div.item_page a,
+div.item_page strong{
+  border: 1px solid #cecdcd;
+  padding: 10px;
+  background-color: rgb(247, 247, 247);
+}
+div.item_page strong {
+  background-color: rgb(136, 106, 207);
+  color: #171c24;
+}
+div.item_page a:hover{
+  cursor: pointer;
+  background-color: #c9c8c8;
+}
+
+div.item_page strong:hover {
+  cursor: pointer;
+  background-color: rgb(132, 94, 180);
+}
+
 .search_loca .select {
 display: flex;
 margin-left: 1%;
@@ -973,8 +1101,9 @@ font-size: 16px;
 }
 
 .search_loca h3 {
-display: block;
-margin: 2%;
+  display: block;
+  margin: 2%;
+  color:#323c4e;
 }
 .search_loca .table th{
 background-color: rgb(94, 28, 199);
@@ -990,33 +1119,209 @@ width: unset !important;
 
 
 @media(max-width: 600px){
-.table thead{
-  display: none;
-}
+  .table thead{
+    display: none;
+  }
 
-.search_loca .table, .table tbody, .table tr, .table td{
+  .search_loca .table, .table tbody, .table tr, .table td{
+    display: block;
+    width: 100%;
+  }
+  .search_loca .table tr{
+    margin-bottom:15px;
+  }
+  .search_loca .table td{
+    text-align: right;
+    padding-left: 50%;
+    text-align: right;
+    position: relative;
+  }
+  .search_loca .table td::before{
+    content: attr(data-label);
+    position: absolute;
+    left:0;
+    width: 50%;
+    padding-left:15px;
+    font-size:15px;
+    font-weight: bold;
+    text-align: left;
+  }
+}
+/* ------------------------ */
+#form_cnt {
+  display: flex;
+  width: 90%;
+  margin: auto;
+}
+.left_form {
+  flex: 1;
+  margin-right: 30px;
+  height: 500px;
+  border-radius: 3px;
+}
+.yellow {
+  background-color: rgb(219, 185, 34);
+  color: rgb(48, 51, 63);
+}
+.green {
+  background-color: rgb(33, 104, 33);
+  color: rgb(241, 239, 239);
+}
+.nocolor {
+  color: rgb(48, 51, 63);
+  background-color: rgb(192, 189, 189);
+}
+.left_form h3 {
+  text-align: center;
+  padding-top: 40px;
+  padding-bottom: 15px;
+}
+.yellowborder {
+  border-top: 2px solid rgb(48, 51, 63);
+  border-bottom: 2px solid rgb(48, 51, 63);
+}
+.greenborder {
+  border-top: 2px solid rgb(230, 230, 230);
+  border-bottom: 2px solid rgb(230, 230, 230);
+}
+.left_form img {
+  height: 15%;
+  margin-left: 42.5%;
+  margin-bottom: 20px;
+}
+.left_form .cn {
+  text-align: center;
+  width: 90%;
+  margin: auto;
+  padding: 10px;
+  font-weight: 600;
+}
+.left_form > p {
+  margin: 10px 0 5px 5%;
+  font-weight: 600;
+}
+.left_form .person_form {
+  width: 93%;
+  margin: auto;
+  background-color: #d8d7d7;
+  border-radius: 7px;
+}
+.left_form .person_form label {
+  display: flex;
+  padding: 10px;
+  color: #444a55;
+}
+.left_form .person_form label i {
+  margin-right: 5px;
+}
+.left_form .person_form label:first-child {
+  padding-top: 20px;
+}
+.left_form .person_form label:last-child {
+  padding-bottom: 20px;
+}
+.right_box {
+  flex: 2;
+}
+.right_form {
+  background-color: rgb(240, 238, 238);
+}
+.right_form h2 {
+  font-size: 21px;
+  text-align: center;
+  margin-bottom: 60px;
+  padding-top: 100px;
+}
+.right_form p {
+  margin-left: 5%;
+  line-height: 40px;
+}
+.right_form table {
+  width: 90%;
+  margin: 30px 0 0 5%;
+}
+.right_form table, 
+.right_form table td {
+  border-collapse: collapse!important;
+  border: 1px solid #323c4e;
+}
+.right_form table td {
+  padding: 10px;
+  line-height: 30px;
+}
+.right_form .lass {
+  height: 40px;
+}
+.btn_export {
+  float: right;
+}
+.btn_export button {
+  width: 80px;
+  height: 30px;
+  border: 1px solid #dddd;
+  border-radius: 2px;
+  background-color: #8f8c8c;
+  color: rgb(243, 243, 243);
+}
+.btn_export button:hover {
+  cursor: pointer;
+  background-color: #ada9a9;
+}
+/* ----------------------- */
+.logout {
   display: block;
-  width: 100%;
+  margin-left: auto;
+  width: 200px;
+  margin-bottom: 10px;
 }
-.search_loca .table tr{
-  margin-bottom:15px;
+.logout p,
+.logout button {
+  display: inline;
 }
-.search_loca .table td{
-  text-align: right;
-  padding-left: 50%;
-  text-align: right;
-  position: relative;
+.logout p {
+  font-size: 20px;
+  color:#444a55;
 }
-.search_loca .table td::before{
-  content: attr(data-label);
-  position: absolute;
-  left:0;
-  width: 50%;
-  padding-left:15px;
-  font-size:15px;
-  font-weight: bold;
-  text-align: left;
+.logout button {
+  border-radius: 50%;
+  border: none;
+  
+  box-shadow: 3px 2px 5px rgb(216, 146, 146);
 }
+.logout button i {
+  font-size: 20px;
+  color: rgb(189, 18, 18);
+}
+.logout button:hover {
+  cursor: pointer;
+  color: rgb(240, 62, 62);
 }
 
-
+div.btn input {
+  height: 43px;
+  width: 150px;
+  border-radius: 8px 8px 8px 0;
+  font-size: 17px;
+}
+div.cancel_btn input{
+  background-color: rgb(212, 194, 194);
+  color: rgb(221, 85, 97);
+  border: 1px solid rgb(219, 86, 86);
+  margin-right: 25px;
+}
+div.next_btn input{
+  border: 1px solid rgb(61, 94, 165)!important;
+  background-color: rgb(61, 94, 165);
+  color: white;
+}
+div.next_btn input:hover {
+  cursor: pointer;
+  border:rgb(85, 115, 179);
+  background-color: rgb(85, 115, 179);
+}
+div.cancel_btn input:hover{
+  cursor: pointer;
+  border: rgb(204, 66, 77);
+  background-color: rgb(204, 66, 77);
+  color: white;
+}

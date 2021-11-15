@@ -43,9 +43,12 @@ allSideMenu.forEach(item=> {
 // -----------------------------------
 function Validator2(options){
     var formElement = document.querySelector(options.form);
-    if (formElement){
-        formElement.onsubmit = function (e) {
-            e.preventDefault(); 
+    var next1 = document.getElementById("next1");
+
+    // if (formElement){
+        next1.onclick = function(e){
+        // function next1(){
+            // e.preventDefault(); 
             var isFormValid = true;
             
             if (isFormValid) {
@@ -60,14 +63,18 @@ function Validator2(options){
             } else {
                 //submit.classList.remove("btn_disabled");
             }
-        }
+        
     }
 }
 function Validator3(options){
     var formElement = document.querySelector(options.form);
+    var next2 = document.getElementById("next2");
+
+    // if (formElement){
+        // next2.onclick = function(e){
     if (formElement){
-        formElement.onsubmit = function (e) {
-            e.preventDefault(); 
+        next2.onclick = function(e){
+            //e.preventDefault(); 
             var isFormValid = false;
             var checkbox = document.getElementById("checkbox");
             if (checkbox.checked == true) {
@@ -77,7 +84,6 @@ function Validator3(options){
                 if (typeof options.onSubmit === 'function'){
                     let modal = document.querySelector(".popup");
                     modal.style.display = "block";
-
                 }
             } else {
                 //submit.classList.remove("btn_disabled");
@@ -87,9 +93,14 @@ function Validator3(options){
 }
 function Validator4(options){
     var formElement = document.querySelector(options.form);
+    
+        var next3 = document.getElementById("next3");
+
+    // if (formElement){
+        // next2.onclick = function(e){
     if (formElement){
-        formElement.onsubmit = function (e) {
-            e.preventDefault(); 
+        next3.onclick = function(e){
+            //e.preventDefault(); 
             var isFormValid = true;
             
             if (isFormValid) {
@@ -122,12 +133,13 @@ function Validator(options){
     }
 
     var formElement = document.querySelector(options.form);
-
+    var next = document.getElementById("btn1_submit");
 
     if (formElement){
-
-        formElement.onsubmit = function (e) {
-            e.preventDefault(); 
+        next.onclick = function(e){
+        // formElement.onsubmit = function (e) 
+        // {
+            //e.preventDefault(); 
 
             var isFormValid = true;
 
@@ -157,13 +169,14 @@ function Validator(options){
                     // })
                     formElement.style.display="none";
                     document.getElementById("form2").style.display="block";
+                    document.getElementById("btn1").style.display="none";
                     document.getElementsByClassName("btn2")[0].style.display="block";
                     document.getElementsByClassName("step1")[0].classList.remove("step_form");
                     document.getElementsByClassName("step2")[0].classList.add("step_form");
                     
                 }
             } else {
-                submit.classList.remove("btn_disabled");
+                // submit.classList.remove("btn_disabled");
             }
         }
 
@@ -259,5 +272,3 @@ Validator.isCCCD = function (selector, min, max) {
         }
     }
 }
-
-

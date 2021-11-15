@@ -9,6 +9,7 @@
 	<title>Admin</title>
 </head>
 <body>
+<script src="../../script/script_ad.js"></script>
 
 	<!-- SIDEBAR -->
 	<section id="sidebar">
@@ -150,7 +151,7 @@
 			</div>
 
 			<div id="certificate" class="view_op">
-				<?php include 'certificate.html' ?>
+				<?php include 'certificate.php' ?>
 			</div>
 
 			<div id="schedule" class="view_op">
@@ -168,7 +169,7 @@
 
 	
 
-	<script src="../../script/script_ad.js"></script>
+	
 </body>
 
 

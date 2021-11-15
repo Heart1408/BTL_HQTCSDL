@@ -1,63 +1,6 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" />
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-    <link rel="stylesheet" href="../../css/home.css">
-    <title>Document</title>
-</head>
-<body>
-    <div class="container">
-        <div class="wrapper">
-            <nav>
-                <input type="checkbox" id="show-search">
-                <input type="checkbox" id="show-menu">
-                <label for="show-menu" class="menu-icon"><i class="fas fa-bars"></i></label>
-                <div class="content">
-                    <div class="logo"><a href="#">Tiêm chủng Covid 19</a></div>
-                    <ul class="links">
-                        <li><a href="#">Trang chủ</a></li>
-                        <li><a href="#">Đăng ký tiêm</a></li>
-                        <li>
-                            <a href="#" class="desktop-link">Tra cứu</a>
-                            <input type="checkbox" id="show-tc">
-                            <label for="show-tc">Tra cứu</label>
-                            <ul>
-                                <li><a href="#">Tra cứu chứng nhận tiêm</a></li>
-                                <li><a href="#">Tra cứu kết quả đăng ký</a></li>
-                            </ul>
-                        </li>
-                        <li>
-                            <a href="#" class="desktop-link">Tài liệu</a>
-                            <input type="checkbox" id="show-tl">
-                            <label for="show-tl">Tài liệu</label>
-                            <ul>
-                                <li><a href="#">Drop Menu 1</a></li>
-                                <li><a href="#">Drop Menu 2</a></li>
-                                <li>
-                                    <a href="#" class="desktop-link">More Items</a>
-                                    <input type="checkbox" id="show-items">
-                                    <label for="show-items">More Items</label>
-                                    <ul>
-                                        <li><a href="#">Sub Menu 1</a></li>
-                                        <li><a href="#">Sub Menu 2</a></li>
-                                        </ul>
-                                </li>
-                            </ul>
-                        </li>
-                        <li><a href="#">Đăng nhập</a></li>
-                    </ul>
-                </div>
-                <!-- <label for="show-search" class="search-icon"><i class="fas fa-search"></i></label>
-                <form action="#" class="search-box">
-                    <input type="text" placeholder="Type Something to Search..." required>
-                    <button type="submit" class="go-icon"><i class="fas fa-long-arrow-alt-right"></i></button>
-                </form> -->
-            </nav>
-        </div>
+<?php 
+    include 'header.php';
+?>
         <div class="content">
             <div id="title"></div>
         </div>
@@ -106,20 +49,30 @@
         </div>
         <div class="search_loca">
             <h3>Tra cứu điểm tiêm theo địa bàn</h3>
-            <div class="select">
-                <select type="input" name="" id="">
-                    <option value="">Chọn Tỉnh/ TP</option>
+            <form class="select" action="" method="POST" id="form">
+                
+                <select type="input" name="province" id="province">
+                    <option value="0">Chọn Tỉnh/ TP</option>
+                    <?php
+                        $sql = "SELECT * FROM province";
+                        $result = $con->query($sql); 
+                
+                        while($row = $result->fetch_assoc()){
+                          echo "<option value=".$row['province_id'].">".$row['province_name']."</option>";
+                     } ?>
                 </select>
-                <select type="input" name="" id="">
-                    <option value="">Chọn Quận/ Huyện</option>
+                
+                <select type="input" name="" id="district">
+                    <option value="">Chọn Quận/Huyện</option>
                 </select>
-                <select type="input" name="" id="">
-                    <option value="">Chọn Xã/ Phường</option>
+                <select type="input" name="ward" id="ward">
+                    <option value="0">Chọn Xã/ Phường</option>
                 </select>
                 <div class="btn next_btn">
-                    <button ><i class="fas fa-search"></i> Tìm kiếm</button>
+                    <button type="submit" name="submit"><i class="fas fa-search"></i> Tìm kiếm</button>
                 </div>
-            </div>
+                
+            </form>
             <table class="table">
                 <thead>
                     <tr>
@@ -129,48 +82,55 @@
                         <th>Xã/Phường</th>
                         <th>Quận/Huyện</th>
                         <th>Tỉnh/TP</th>
-                        <th>Người đứng đầu cơ sở tiêm chủng</th>
                         <th>Số bàn tiêm</th>
                     </tr>
                 </thead>
-                <tbody>
-                    <tr>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                    </tr>
-                    <tr>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                    </tr>
-                    <tr>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                    </tr>
+                <tbody id="ans">
+                <?php 
+                    $limit = !empty($_GET['per_page'])?$_GET['per_page']:8;
+                    $current_page = !empty($_GET['page'])?$_GET['page']:1;
+                    $offset = ($current_page-1) * $limit;
+                ?>
+                
                 </tbody>
             </table>
+            
+            
         </div>
         <div class="footer"></div>
     </div>
  <script src="../../script/script.js"></script>
 </body>
+<script>
+
+    jQuery(document).ready(function($){
+        $("#province").change(function(event){
+            provinceid = $("#province").val();
+            $.post('district.php', {"provinceid": provinceid}, function(data){
+                $("#district").html(data);
+            });
+        });
+
+        $("#district").change(function(event){
+            districtid = $("#district").val();
+            $.post('ward.php', {"districtid": districtid}, function(data){
+                $("#ward").html(data);
+            
+            });
+        });
+
+        $('#form').submit(function(event){
+            event.preventDefault();
+            provinceid = $("#province").val();
+            wardid = $("#ward").val();
+            $.post('search_site.php', {"submit" : "OK", "province": provinceid, "ward" : wardid}, function(data) {
+                $("#ans").html(data);
+            });
+        })
+    })
+
+    
+</script>
 <script>
     var bienx = ['24/9','25/9','26/9','27/9','28/9','30/9','1/10','2/10','3/10','4/10','5/10','6/10','7/10','8/10','9/10','10/10','11/10','12/10','13/10','14/10','15/10','16/10','17/10','18/10','19/10','20/10','21/10'];
     var bieny = [50,80,10,10,79,100,34,23,45,78,45,67,30,10,78,56,54,12,34,56,120,150];

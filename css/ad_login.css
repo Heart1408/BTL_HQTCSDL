@@ -61,7 +61,7 @@ form button:hover {
     background:rgb(163, 162, 162);
     color:white;
     margin-left: 6px;
-    transition: .6s;
+    transform: scale(0.99);
 }
 .form-field {
     margin-bottom: 30px;
@@ -90,4 +90,8 @@ form button:hover {
     font-size: 20px;
     line-height: 45px;
     color: rgb(224, 222, 222);
+}
+
+p {
+    text-align: center;
 }
