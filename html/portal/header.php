@@ -24,7 +24,7 @@
                 <input type="checkbox" id="show-menu">
                 <label for="show-menu" class="menu-icon"><i class="fas fa-bars"></i></label>
                 <div class="content">
-                    <div class="logo"><a href="#">Tiêm chủng Covid 19</a></div>
+                    <div class="logo"><a href="">Tiêm chủng Covid 19</a></div>
                     <ul class="links">
                         <li><a href="home.php">Trang chủ</a></li>
                         <li><a href="register.php">Đăng ký tiêm</a></li>
@@ -42,20 +42,20 @@
                             <input type="checkbox" id="show-tl">
                             <label for="show-tl">Tài liệu</label>
                             <ul>
-                                <li><a href="#">Drop Menu 1</a></li>
-                                <li><a href="#">Drop Menu 2</a></li>
+                                <li><a href="#">Cẩm nang tiêm chủng</a></li>
+                                <li><a href="#">Vaccine Covid-19</a></li>
                                 <li>
                                     <a href="#" class="desktop-link">More Items</a>
                                     <input type="checkbox" id="show-items">
                                     <label for="show-items">More Items</label>
                                     <ul>
-                                        <li><a href="#">Sub Menu 1</a></li>
+                                        <li><a href="#">Chú ý trước tiêm</a></li>
                                         <li><a href="#">Sub Menu 2</a></li>
                                         </ul>
                                 </li>
                             </ul>
                         </li>
-                        <li><a href="#">Đăng nhập</a></li>
+                        <!-- <li><a href="#">Đăng nhập</a></li> -->
                     </ul>
                 </div>
                 <!-- <label for="show-search" class="search-icon"><i class="fas fa-search"></i></label>

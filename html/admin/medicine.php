@@ -3,14 +3,14 @@
 ?>
 <div class="head-title">
     <div class="left">
-        <h2>Cập nhật lịch tiêm chủng</h2>
+        <h2>Quản lý kho vaccine</h2>
         <ul class="breadcrumb">
             <li>
-                <a href="#">Lịch tiêm</a>
+                <a href="#">Quản lý kho vaccine</a>
             </li>
             <li><i class='bx bx-chevron-right' ></i></li>
             <li>
-                <a class="active" href="#">Chứng nhận tiêm chủng</a>
+                <a class="active" href="#">Số lượng vaccine còn lại</a>
             </li>
         </ul>
     </div>

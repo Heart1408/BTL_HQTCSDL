@@ -18,7 +18,7 @@
         LEFT JOIN scheduledetail sd ON sd.citizen_id = ci.citizen_id
         JOIN schedule s ON s.schedule_id = sd.schedule_id
         JOIN vaccine v ON sd.vaccine_id = v.vaccine_id
-        WHERE ci.identity_number = $cccd AND sd.status = 'hoan thanh'
+        WHERE ci.identity_number = $cccd AND sd.status = 'Hoàn thành'
         ORDER BY s.date DESC LIMIT 2;");
 
     $row = $result->fetch_assoc();

@@ -72,19 +72,19 @@
         </div>
         <ul class="todo-list" id="todo-list">
             <li class="completed">
-                <p>Họ tên: Nguyễn Văn A</p>
+                <p>Họ tên: </p>
             </li>
             <li class="completed">
                 <p>Ngày sinh: </p>
             </li>
             <li class="not-completed">
-                <p>Giới tính</p>
+                <p>Giới tính: </p>
             </li>
             <li class="completed">
-                <p>Số điện thoại</p>
+                <p>Số điện thoại: </p>
             </li>
             <li class="not-completed">
-                <p>Email</p>
+                <p>Email: </p>
             </li>
             <li class="completed">
                 <p>Số CMND/CCCD/HC: </p>
@@ -126,7 +126,7 @@
                         <p>Tiền sử bệnh</p>
                     </div>
                     <div class="content" id="popup-content">
-
+                        
                     </div>
                     <div class="btn">
                         <div class="cancel_btn">

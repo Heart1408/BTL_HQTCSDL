@@ -1,65 +1,7 @@
 <?php 
     include '../db_connect.php';
+    include 'header.php';
 ?>
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" />
-    <link rel="stylesheet" href="../../css/home.css">
-    <title>Đăng ký tiêm</title>
-</head>
-<body>
-    <div id="container">
-       <div class="wrapper">
-            <nav>
-                <input type="checkbox" id="show-search">
-                <input type="checkbox" id="show-menu">
-                <label for="show-menu" class="menu-icon"><i class="fas fa-bars"></i></label>
-                <div class="content">
-                    <div class="logo"><a href="#">Tiêm chủng Covid 19</a></div>
-                    <ul class="links">
-                        <li><a href="#">Trang chủ</a></li>
-                        <li><a href="#">Đăng ký tiêm</a></li>
-                        <li>
-                            <a href="#" class="desktop-link">Tra cứu</a>
-                            <input type="checkbox" id="show-tc">
-                            <label for="show-tc">Tra cứu</label>
-                            <ul>
-                                <li><a href="#">Tra cứu chứng nhận tiêm</a></li>
-                                <li><a href="#">Tra cứu kết quả đăng ký</a></li>
-                            </ul>
-                        </li>
-                        <li>
-                            <a href="#" class="desktop-link">Tài liệu</a>
-                            <input type="checkbox" id="show-tl">
-                            <label for="show-tl">Tài liệu</label>
-                            <ul>
-                                <li><a href="#">Drop Menu 1</a></li>
-                                <li><a href="#">Drop Menu 2</a></li>
-                                <li>
-                                    <a href="#" class="desktop-link">More Items</a>
-                                    <input type="checkbox" id="show-items">
-                                    <label for="show-items">More Items</label>
-                                    <ul>
-                                        <li><a href="#">Sub Menu 1</a></li>
-                                        <li><a href="#">Sub Menu 2</a></li>
-                                        </ul>
-                                </li>
-                            </ul>
-                        </li>
-                        <li><a href="#">Đăng nhập</a></li>
-                    </ul>
-                </div>
-                <!-- <label for="show-search" class="search-icon"><i class="fas fa-search"></i></label>
-                <form action="#" class="search-box">
-                    <input type="text" placeholder="Type Something to Search..." required>
-                    <button type="submit" class="go-icon"><i class="fas fa-long-arrow-alt-right"></i></button>
-                </form> -->
-            </nav>
-        </div>
         
         <div class="content">
             <div id="title"></div>
@@ -116,7 +58,7 @@
                         <select name="" id="gioitinh" name="gender">
                             <option value="">Giới tính</option>
                             <option value="Nam">Nam</option>
-                            <option value="Nu">Nữ</option>
+                            <option value="Nữ">Nữ</option>
                         </select>
                         <small></small>
                     </div>
@@ -294,30 +236,30 @@
                             <td>
                                 <input type="text" placeholder="Nếu có, ghi rõ các loại tác nhân dị ứng" name="di_ung">
                             </td>
-                            <td><input type="radio" name="phan_ve" value="Co"></td>
-                            <td><input type="radio" name="phan_ve" checked="checked" value="Khong"></td>
-                            <td><input type="radio" name="phan_ve" value="Khong ro"></td>
+                            <td><input type="radio" name="phan_ve" value="Có"></td>
+                            <td><input type="radio" name="phan_ve" checked="checked" value="Không"></td>
+                            <td><input type="radio" name="phan_ve" value="Không rõ"></td>
                         </tr>
                         <tr>
                             <td>2. Tiền sử bị COVID-19 trong vòng 6 tháng</td>
                             <td></td>
-                            <td><input type="radio" name="covid" value="Co"></td>
-                            <td><input type="radio" checked="checked" name="covid" value="Khong"></td>
-                            <td><input type="radio" name="covid" value="Khong ro"></td>
+                            <td><input type="radio" name="covid" value="Có"></td>
+                            <td><input type="radio" checked="checked" name="covid" value="Không"></td>
+                            <td><input type="radio" name="covid" value="Không rõ"></td>
                         </tr>
                         <tr>
                             <td>3. Tiền sử tiêm vắc xin khác trong 14 ngày qua</td>
                             <td><input type="text" placeholder="Nếu có, ghi rõ loại vắc xin" name="other_vaccine_name"></td>
-                            <td><input type="radio" value="Co" name="other_vaccine"></td>
-                            <td><input type="radio" checked="checked" name="other_vaccine" value="Khong"></td>
-                            <td><input type="radio" name="other_vaccine" value="Khong ro"></td>
+                            <td><input type="radio" value="Có" name="other_vaccine"></td>
+                            <td><input type="radio" checked="checked" name="other_vaccine" value="Không"></td>
+                            <td><input type="radio" name="other_vaccine" value="Không rõ"></td>
                         </tr>
                         <tr>
                             <td>4. Tiền sử suy giảm miễn dịch, ung thư giai đoạn cuối, cắt lách, xơ gan mất bù ...</td>
                             <td></td>
-                            <td><input type="radio" name="ung_thu" value="Co"></td>
-                            <td><input type="radio" checked="checked" name="ung_thu" value="Khong"></td>
-                            <td><input type="radio" name="ung_thu" value="Khong ro"></td>
+                            <td><input type="radio" name="ung_thu" value="Có"></td>
+                            <td><input type="radio" checked="checked" name="ung_thu" value="Không"></td>
+                            <td><input type="radio" name="ung_thu" value="Không rõ"></td>
                         </tr>
                     </tbody>
                 </table>
@@ -409,9 +351,8 @@
                     <p>Chờ thông tin đăng ký tiêm được cập nhật</p>
                 </div>
                 <div class="btn next_btn">
-                    <button>Trang chủ</button>
+                    <a href="home.php"><button>Trang chủ</button></a>
                 </div>
-                
             </div>
 
                             

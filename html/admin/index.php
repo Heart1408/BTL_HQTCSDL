@@ -9,7 +9,6 @@
 	<title>Admin</title>
 </head>
 <body>
-<script src="../../script/script_ad.js"></script>
 
 	<!-- SIDEBAR -->
 	<section id="sidebar">
@@ -90,7 +89,7 @@
 				<span class="num">8</span>
 			</a>
 			<a href="#" class="profile">
-				<img src="" alt="">
+				<!-- <img src="" alt=""> -->
 			</a>
 		</nav>
 		<!-- NAVBAR -->
@@ -165,11 +164,7 @@
 		<!-- MAIN -->
 	</section>
 	<!-- CONTENT -->
-	
-
-	
-
-	
+	<script src="../../script/script_ad.js"></script>
 </body>
 
 

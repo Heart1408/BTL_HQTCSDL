@@ -46,12 +46,12 @@
                                 LEFT JOIN ward ON ward.ward_id =  citizen.ward_id
                                 JOIN district ON district.district_id = ward.district_id
                                 JOIN province ON province.province_id = district.province_id
-                                WHERE phone = $phonevalue AND identity_number = $cccdvalue AND sd.status = 'dang ki'");
+                                WHERE phone = $phonevalue AND identity_number = $cccdvalue AND sd.status = 'Đăng ký'");
                             $sql = $con->query("SELECT v.vaccine_name, s.date FROM citizen ci
                                 LEFT JOIN scheduledetail sd ON sd.citizen_id = ci.citizen_id
                                 JOIN schedule s ON s.schedule_id = sd.schedule_id
                                 JOIN vaccine v ON sd.vaccine_id = v.vaccine_id
-                                WHERE ci.phone = $phonevalue AND ci.identity_number = $cccdvalue AND sd.status = 'hoan thanh'
+                                WHERE ci.phone = $phonevalue AND ci.identity_number = $cccdvalue AND sd.status = 'Hoàn thành'
                                 ORDER BY s.date DESC LIMIT 3");
                             $sql2 = $con->query("SELECT s.date, s.start_time, s.end_time, i.injectionSite_name,
                                 ward_name, district_name, province_name
@@ -63,7 +63,7 @@
                                 JOIN district ON district.district_id = ward.district_id
                                 JOIN province ON province.province_id = district.province_id
                                 JOIN vaccine v ON sd.vaccine_id = v.vaccine_id
-                                WHERE ci.phone = $phonevalue AND ci.identity_number = $cccdvalue AND sd.status = 'dang ki';");
+                                WHERE ci.phone = $phonevalue AND ci.identity_number = $cccdvalue AND sd.status = 'Đăng ký';");
                                 
 
                         if ($phonevalue =="" || $cccdvalue=="") {
@@ -104,6 +104,7 @@
                                                 <p style="padding-left: 15px;">';if ($injectionNumber >= 1 ) echo ' &#10003;'; echo 'Đã tiêm:';
                                                     
                                                     $injec = $sql->fetch_array();
+                                                    if ($injectionNumber >= 1 )
                                                     echo '
                                                     <div class="row">
                                                         <p style="padding-left: 40px;">&bull; Loại vắc xin: '.$injec['vaccine_name'].'</p>

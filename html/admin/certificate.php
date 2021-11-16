@@ -119,7 +119,6 @@
                     ?>
                 </select> 
             </div>
-            
 
             <button type="submit" class="update" onclick="update_citizen()" id="update_citizen">Cập nhật</button>
         </form>
@@ -134,7 +133,7 @@
             <thead>
                 <tr>
                     <th>Họ tên</th>
-                    <th>Số CMT/CCCD/HC</th>
+                    <th>Số CMT/CCCD</th>
                     <th>Ngày sinh</th>
                 </tr>
             </thead>

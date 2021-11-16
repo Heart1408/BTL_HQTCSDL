@@ -10,7 +10,7 @@
             </li>
             <li><i class='bx bx-chevron-right' ></i></li>
             <li>
-                <a class="active" href="#">Chứng nhận tiêm chủng</a>
+                <a class="active" href="#">Tạo lịch tiêm</a>
             </li>
         </ul>
     </div>
