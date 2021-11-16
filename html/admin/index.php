@@ -1,3 +1,6 @@
+<?php 
+	include '../db_connect.php';
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -123,15 +126,51 @@
 				<li>
 					<i class="fas fa-syringe"></i>
 					<span class="text">
-						<h3>2834</h3>
-						<p>Tổng số mũi đã tiêm</p>
+						<?php 
+							$siteID = $_GET['site'];
+
+							$sql = "call number_injected_people('$siteID', '1', @result); SELECT @result AS result;";
+
+							$res = mysqli_query($con, $sql);
+
+							$result = 2;
+
+							if ($res) 
+							{
+								while ($row = mysqli_fetch_object($res))
+								{
+									$result = $row->result;
+								}
+							}
+							
+						?>
+						<h3><?php echo $result; ?></h3>
+						<p>Số người tiêm mũi 1</p>
 					</span>
 				</li>
 				<li>
 					<i class="fas fa-syringe"></i>
 					<span class="text">
-						<h3>2543</h3>
-						<p></p>
+					<?php 
+							$siteID = $_GET['site'];
+
+							$sql = "call number_injected_people('$siteID', '2', @result); SELECT @result AS result;";
+
+							$res = mysqli_query($con, $sql);
+
+							$result = 1;
+
+							if ($res) 
+							{
+								while ($row = mysqli_fetch_object($res))
+								{
+									$result = $row->result;
+								}
+							}
+							
+						?>
+						<h3><?php echo $result; ?></h3>
+						<p>Số người tiêm mũi 2</p>
 					</span>
 				</li>
 				<li>
